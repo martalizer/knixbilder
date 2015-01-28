@@ -24,7 +24,6 @@ public class IndexServlet extends HttpServlet {
         String currentLocation = request.getRequestURI();
 
         currentLocation = URLDecoder.decode(currentLocation, "UTF-8");
-        //System.out.println("currentLocation :" + currentLocation);
 
         if (currentLocation.endsWith("/") || currentLocation.endsWith(".jpg") || currentLocation.endsWith(".JPG")) {
             File srcFile = new File(imageRoot + "/" + URLDecoder.decode(request.getPathInfo(), "UTF-8"));
@@ -43,7 +42,6 @@ public class IndexServlet extends HttpServlet {
 
             for (File f : files) {
                 if (!f.getName().startsWith(".")) {
-                    //System.out.println(f.getName());
                     folders.add(new MyFile(currentLocation + "/" + f.getName(), f.getName()));
                 }
             }
