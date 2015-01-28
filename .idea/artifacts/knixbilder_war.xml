@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="knixbilder:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="knixbilder.war">
+      <element id="artifact" artifact-name="knixbilder:war exploded" />
+    </root>
+  </artifact>
+</component>

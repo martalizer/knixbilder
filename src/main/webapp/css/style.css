@@ -1,0 +1,35 @@
+html {
+    background-color: #222;
+    color: white;
+}
+
+img {
+    width: 100%;
+}
+
+div.image {
+    float: left;
+    margin: 20px;
+    padding: 5px;
+    border: black 1px solid;
+    background-color: white;
+}
+
+div.imagepadding {
+    background-color: #555;
+    padding: 15px;
+}
+
+div.image div.canvas {
+    height: 250px;
+    width: 250px;
+    overflow: hidden;
+    border: black solid 1px;
+}
+
+div.image div.caption {
+    margin-top: 7px;
+    text-align: center;
+    height: 18px;
+    font-size: 10pt;
+}

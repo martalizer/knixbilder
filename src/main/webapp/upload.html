@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8">
+    <title>Knixbilder</title>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="css/style.css"></script>
+  </head>
+  <body>
+
+<form enctype="multipart/form-data" action="/knixbilder/upload" method="post">
+  <p><label for="location">Plats</label><input type="text" name="location" id="location"></p>
+  <p><label for="date">Datum</label><input type="text" name="date" id ="date"></p>
+  <p><label for="author">Fotografens namn</label><input type="text" name="author" id="author"></p>
+  <p><input type="file" name="file" id="file"></p>
+  <p><input type="submit"></p>
+</form>
+		
+  </body>
+</html>
