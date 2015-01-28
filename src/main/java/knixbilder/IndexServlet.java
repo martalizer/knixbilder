@@ -43,7 +43,7 @@ public class IndexServlet extends HttpServlet {
 
             for (File f : files) {
                 if (!f.getName().startsWith(".")) {
-                    System.out.println(f.getName());
+                    //System.out.println(f.getName());
                     folders.add(new MyFile(currentLocation + "/" + f.getName(), f.getName()));
                 }
             }
