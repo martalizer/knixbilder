@@ -22,6 +22,7 @@ public class MyFile {
 
     private String file;
     private String absoluteFile;
+
     public MyFile(String s, String s2) {
         file = s2;
         absoluteFile = s;
