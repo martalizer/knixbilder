@@ -22,10 +22,11 @@ import java.util.zip.ZipInputStream;
 /**
  * Created by hedenberg on 13/01/15.
  */
+
 @WebServlet(name = "Upload", value = "/upload")
 @MultipartConfig
 public class Upload extends HttpServlet {
-
+    ThumbnailCreator thumb = new ThumbnailCreator();
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
@@ -136,6 +137,16 @@ public class Upload extends HttpServlet {
                         fos.write(buffer, 0, len);
                     }
                     fos.close();
+
+                    String thumbPath = newFile.getPath().substring(0, newFile.getPath().length()-4) + "_thumb.jpg";
+
+                    int pathLenght = newFile.getPath().length();
+                    String filename = newFile.getName();
+
+                    thumbPath = newFile.getPath().substring(0, pathLenght - filename.length()) + "thumb_" + filename;
+
+                    thumb.createThumbnail(newFile.getPath(),thumbPath , 400);
+                    System.out.println(newFile.getName());
                 }
                 zis.closeEntry();
                 zis.close();

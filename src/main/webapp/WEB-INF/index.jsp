@@ -31,28 +31,34 @@
 <div class="site-wrapper">
 
     <div class="site-wrapper-inner">
-        <div class="top"><h1>Välkommen till knixbilder.se</h1></div>
+
         <div class="cover-container">
 
-            <p>${location}</p>
+            <div class="masthead">
+                <div class="top"><h1>Välkommen till knixbilder.se</h1></div>
+                <div style="color:#acacac"><p>${location}</p></div>
+            </div>
 
-            <c:forEach items="${folders}" var="folder">
-                <p><a href="${folder.absoluteFile}">${folder.file}</a></p>
-            </c:forEach>
 
-            <c:forEach items="${images}" var="image">
-                <div class="image">
-                    <div class="imagepadding">
-                        <div class="canvas">
-                            <img src="${image.absoluteFile}" width="200px">
-                        </div>
-                    </div>
+            <div class="canvas">
+
+                <c:forEach items="${links}" var="link">
+                    <p><a href="${link.absoluteFile}">${link.file}</a></p>
+                </c:forEach>
+
+                <div>
+                    <c:forEach items="${images}" var="image">
+
+                        <a href="${image.absoluteFile}"><img src="${image.thumbFile}" width="200px"></a>
+
+                    </c:forEach>
                 </div>
-            </c:forEach>
+            </div>
 
             <div class="mastfoot">
                 <div class="inner">
                     <p><a href="http://localhost:8080/knixbilder/upload.html">Upload Page</a></p>
+
                     <p>knixbilder.se</p>
                 </div>
             </div>

@@ -5,12 +5,14 @@ package knixbilder;
  */
 public class MyFile {
     public String getFile() {
-        return file;
+        return File;
     }
 
     public void setFile(String file) {
-        this.file = file;
+        File = file;
     }
+
+    private String File;
 
     public String getAbsoluteFile() {
         return absoluteFile;
@@ -20,11 +22,20 @@ public class MyFile {
         this.absoluteFile = absoluteFile;
     }
 
-    private String file;
     private String absoluteFile;
+    private String thumbFile;
 
-    public MyFile(String s, String s2) {
-        file = s2;
+    public MyFile(String s, String s2, String s3) {
+        File = s2;
         absoluteFile = s;
+        thumbFile = s3;
+    }
+
+    public String getThumbFile() {
+        return thumbFile;
+    }
+
+    public void setThumbFile(String thumbFile) {
+        this.thumbFile = thumbFile;
     }
 }
